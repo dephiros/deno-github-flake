@@ -1,5 +1,57 @@
 {
   "nodes": {
+    "deno-aarch64-darwin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1729217427,
+        "narHash": "sha256-3lGn2C1FQq9hYw8i7oQH6FTxvkOKgaEFtrnPiQUudn4=",
+        "type": "tarball",
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-apple-darwin.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-apple-darwin.zip"
+      }
+    },
+    "deno-aarch64-linux": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1729210890,
+        "narHash": "sha256-7XwUNetmRcq5pRToF2iauw+B5YVmI3nkduwVbu3b2Fg=",
+        "type": "tarball",
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-unknown-linux-gnu.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-unknown-linux-gnu.zip"
+      }
+    },
+    "deno-x86_64-darwin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1729213525,
+        "narHash": "sha256-qqbhdMsais2DqSiyVgMclDIjVsneKX6E113PhCSWNPY=",
+        "type": "tarball",
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-apple-darwin.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-apple-darwin.zip"
+      }
+    },
+    "deno-x86_64-linux": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1729211060,
+        "narHash": "sha256-H4lmSQeNF+ozNAGeBOXcGjtPpbaHCVsy2BYn0UvYwnQ=",
+        "type": "tarball",
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-unknown-linux-gnu.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-unknown-linux-gnu.zip"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -35,6 +87,10 @@
     },
     "root": {
       "inputs": {
+        "deno-aarch64-darwin": "deno-aarch64-darwin",
+        "deno-aarch64-linux": "deno-aarch64-linux",
+        "deno-x86_64-darwin": "deno-x86_64-darwin",
+        "deno-x86_64-linux": "deno-x86_64-linux",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
       }

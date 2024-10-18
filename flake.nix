@@ -2,6 +2,23 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
+    # let flake handle hash. The tradeoff is we would need to download for all systems
+    deno-x86_64-linux = {
+      url = "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-unknown-linux-gnu.zip";
+      flake = false;
+    };
+    deno-aarch64-linux = {
+      url = "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-unknown-linux-gnu.zip";
+      flake = false;
+    };
+    deno-x86_64-darwin = {
+      url = "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-apple-darwin.zip";
+      flake = false;
+    };
+    deno-aarch64-darwin = {
+      url = "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-apple-darwin.zip";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -10,46 +27,15 @@
     flake-utils,
     ...
   } @ inputs: let
-    denoMap = {
-      x86_64-linux = {
-        name = "deno-x86_64-unknown-linux-gnu.zip";
-        hash = "sha256-WQ4B0sT3qTVl4/Moj0FcFg5LDZIBPbnmcfUxwrmFyYY=";
-      };
-      aarch64-linux = {
-        name = "deno-aarch64-unknown-linux-gnu.zip";
-        hash = "sha256-a4jQ2fp7QHEt36qNrDECEfyfoqs2Qns5xxIkY9g+Oi0=";
-      };
-      x86_64-darwin = {
-        name = "deno-x86_64-apple-darwin.zip";
-        hash = "sha256-2Ld+ln6KM8m2x+yosiuNLRXjTUro6pyYUk12/R3SV64=";
-      };
-      aarch64-darwin = {
-        name = "deno-aarch64-apple-darwin.zip";
-        hash = "sha256-03fJO1fbunRBmdKrQYt9VdNhYetGvf/xwrn+EneoARI=";
-      };
-    };
-    denoDefs = map (
-      system: let
-        denoDef = denoMap.${system};
-      in
-        nixpkgs.legacyPackages.aarch64-darwin.fetchzip {
-          url = "https://github.com/denoland/deno/releases/download/v2.0.2/${denoDef.name}";
-          sha256 = denoDef.hash;
-        }
-    ) (builtins.attrNames denoMap);
   in
-    flake-utils.lib.eachSystem (builtins.attrNames denoMap) (
+    flake-utils.lib.eachDefaultSystem (
       system: let
+        denoInput = "deno-${system}";
         pkgs = nixpkgs.legacyPackages.${system};
-        denoDef = denoMap.${system};
-        denoBin = pkgs.fetchzip {
-          url = "https://github.com/denoland/deno/releases/download/v2.0.2/${denoDef.name}";
-          sha256 = denoDef.hash;
-        };
         deno = pkgs.stdenv.mkDerivation {
           name = "deno";
-          src = denoBin;
-          buildInputs = [denoDefs];
+          src = inputs.${denoInput};
+          buildInputs = [];
           buildPhase = "";
           installPhase = ''
             mkdir -p $out/bin
