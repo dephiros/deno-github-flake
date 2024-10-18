@@ -33,7 +33,7 @@
         denoDef = denoMap.${system};
       in
         nixpkgs.legacyPackages.aarch64-darwin.fetchzip {
-          url = "https://github.com/denoland/deno/releases/download/v2.0.0/${denoDef.name}";
+          url = "https://github.com/denoland/deno/releases/download/v2.0.2/${denoDef.name}";
           sha256 = denoDef.hash;
         }
     ) (builtins.attrNames denoMap);
@@ -43,7 +43,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         denoDef = denoMap.${system};
         denoBin = pkgs.fetchzip {
-          url = "https://github.com/denoland/deno/releases/download/v2.0.0/${denoDef.name}";
+          url = "https://github.com/denoland/deno/releases/download/v2.0.2/${denoDef.name}";
           sha256 = denoDef.hash;
         };
         deno = pkgs.stdenv.mkDerivation {
