@@ -3,53 +3,53 @@
     "deno-aarch64-darwin": {
       "flake": false,
       "locked": {
-        "lastModified": 1729217427,
-        "narHash": "sha256-3lGn2C1FQq9hYw8i7oQH6FTxvkOKgaEFtrnPiQUudn4=",
+        "lastModified": 1730259218,
+        "narHash": "sha256-gZ0nPtMMd9GJQXH2BZ3r/s1FvhI9Aw6I2ec8lKpE/U0=",
         "type": "tarball",
-        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-apple-darwin.zip"
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.4/deno-aarch64-apple-darwin.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-apple-darwin.zip"
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.4/deno-aarch64-apple-darwin.zip"
       }
     },
     "deno-aarch64-linux": {
       "flake": false,
       "locked": {
-        "lastModified": 1729210890,
-        "narHash": "sha256-7XwUNetmRcq5pRToF2iauw+B5YVmI3nkduwVbu3b2Fg=",
+        "lastModified": 1730252209,
+        "narHash": "sha256-CY0A8HABkXkjbb8ZbSL5sZT1NZjQJq4m+RjbSPBl0eI=",
         "type": "tarball",
-        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-unknown-linux-gnu.zip"
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.4/deno-aarch64-unknown-linux-gnu.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-aarch64-unknown-linux-gnu.zip"
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.4/deno-aarch64-unknown-linux-gnu.zip"
       }
     },
     "deno-x86_64-darwin": {
       "flake": false,
       "locked": {
-        "lastModified": 1729213525,
-        "narHash": "sha256-qqbhdMsais2DqSiyVgMclDIjVsneKX6E113PhCSWNPY=",
+        "lastModified": 1730254761,
+        "narHash": "sha256-nCz4y8nt09+OBjXylHBT8KnGa2+/zKcQUmaF8gQd2IE=",
         "type": "tarball",
-        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-apple-darwin.zip"
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.4/deno-x86_64-apple-darwin.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-apple-darwin.zip"
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.4/deno-x86_64-apple-darwin.zip"
       }
     },
     "deno-x86_64-linux": {
       "flake": false,
       "locked": {
-        "lastModified": 1729211060,
-        "narHash": "sha256-H4lmSQeNF+ozNAGeBOXcGjtPpbaHCVsy2BYn0UvYwnQ=",
+        "lastModified": 1730252508,
+        "narHash": "sha256-tkuOgKZ6XoFJwSo/75yDnc771M01vXxaXzYaO+cnZbA=",
         "type": "tarball",
-        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-unknown-linux-gnu.zip"
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.4/deno-x86_64-unknown-linux-gnu.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-unknown-linux-gnu.zip"
+        "url": "https://github.com/denoland/deno/releases/download/v2.0.4/deno-x86_64-unknown-linux-gnu.zip"
       }
     },
     "flake-utils": {
@@ -72,15 +72,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1728645113,
-        "narHash": "sha256-LonxC6XoNcVsUCA4qIuEqjI7m8ciq81jgyTsqYyUNpc=",
+        "lastModified": 1717179513,
+        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "f63e30a8cb959eafe82d47b03ac7093431aca6ce",
+        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
+        "ref": "24.05",
         "repo": "nixpkgs",
         "type": "github"
       }
